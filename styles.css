@@ -1,0 +1,89 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #CCC;
+    border: 1px solid #FF8000;
+    padding: 16px;
+}
+
+#wish {
+    cursor: pointer;
+}
+#item {
+    position: relative;
+    height: 128px;
+    background-color: #BBB;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid black;
+    transition: all 1s;
+        margin-top: 16px;
+}
+#wish:hover #item {
+    height: 192px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+#wish:hover .name {
+    font-size: 48px;
+}
+
+.thumbnail {
+    display: block;
+    height: 100%;
+    float: left;
+    margin-right: 16px;
+}
+.name {
+    display: block;
+    margin: 0px;
+    color: white;
+    font-size: 36px;
+    -webkit-text-stroke: 1px black;
+    transition: all 1s;
+}
+.price {
+    display: block;
+    margin: 0px;
+    color: black;
+    font-size: 24px;
+    transition: all 1s;
+}
+.priority {
+    display: block;
+    margin: 0px;
+    color: black;
+    font-size: 30px;
+    transition: all 1s;
+}
+.cheap {
+    -webkit-text-stroke: 1px green;
+}
+.medium {
+    -webkit-text-stroke: 1px yellow;
+}
+.expensive {
+    -webkit-text-stroke: 1px red;
+}
+
+@-webkit-keyframes flash {
+    from {opacity: 1;}
+    to {opacity: 0.25;}
+}
+.low-prio {
+    -webkit-text-stroke: 1px blue;
+}
+.medium-prio {
+    -webkit-text-stroke: 1px yellow;
+    -webkit-animation: flash 2.5s infinite alternate;
+}
+.high-prio {
+    -webkit-text-stroke: 1px red;
+    -webkit-animation: flash 0.5s infinite alternate;
+}
