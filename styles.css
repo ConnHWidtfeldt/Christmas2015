@@ -35,6 +35,21 @@ a {
     margin-top: 64px;
     margin-bottom: 64px;
 }
+.extremewish #item
+{
+    height: 175px;
+}
+.extremewish:hover #item {
+    height: 256px !important;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    border-width: 16px;
+    border-color: red;
+}
+.extremewish:hover .name {
+    font-size: 64px;
+    color: red;
+}
 #wish:hover .name {
     font-size: 48px;
 }
@@ -91,4 +106,10 @@ a {
 .high-prio {
     -webkit-text-stroke: 1px red;
     -webkit-animation: flash 0.5s infinite alternate;
+}
+.extreme-prio {
+    color: red;
+    -webkit-text-stroke: 3px black;
+    -webkit-animation: flash 0.5s infinite alternate;
+    font-size: 60px;
 }
