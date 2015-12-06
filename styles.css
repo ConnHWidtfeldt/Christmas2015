@@ -12,6 +12,11 @@ body {
     padding: 16px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 #wish {
     cursor: pointer;
 }
