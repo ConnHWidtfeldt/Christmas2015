@@ -1,7 +1,7 @@
 function change(prio, price)
 {
     $(".item").css("height", "0px");
-    
+    var results = 0;
     $(".item").each(function(i, obj) {
         
         if (prio != 0 && price != 0)
@@ -9,6 +9,7 @@ function change(prio, price)
             if ($(this).hasClass(prio) && $(this).hasClass(price))
             {
                 $(this).css("height", "128px");
+                results++;
             }
         }
         else if (prio == 0 && price != 0)
@@ -16,6 +17,7 @@ function change(prio, price)
             if ($(this).hasClass(price))
             {
                 $(this).css("height", "128px");
+                results++;
             }
         }
         else if (prio != 0 && price == 0)
@@ -23,12 +25,24 @@ function change(prio, price)
             if ($(this).hasClass(prio))
             {
                 $(this).css("height", "128px");
+                results++;
             }
         }
         else {
             $(".item").css("height", "128px");
+            results++;
         }
     });
+    if (results <= 0)
+    {
+        $(".no-results").css("display", "block");
+        $(".wishes").hide();
+    }
+    else
+    {
+        $(".no-results").css("display", "none");
+        $(".wishes").show();
+    }
 }
 
 $( document ).ready(function() {
