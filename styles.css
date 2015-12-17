@@ -3,13 +3,19 @@
 }
 
 html, body {
-    height: 100%;
 }
 
 body {
     background-color: #CCC;
     border: 1px solid #FF8000;
     padding: 16px;
+}
+
+h2 {
+    margin: 2px;
+}
+h3 {
+    margin: 2px;
 }
 
 a {
@@ -20,7 +26,7 @@ a {
 #wish {
     cursor: pointer;
 }
-#item {
+.item {
     position: relative;
     height: 128px;
     background-color: #BBB;
@@ -30,28 +36,22 @@ a {
     transition: all 1s;
         margin-top: 16px;
 }
-#wish:hover #item {
+#wish:hover .item {
     height: 192px;
     margin-top: 64px;
     margin-bottom: 64px;
 }
-.extremewish #item
-{
-    height: 175px;
-}
-.extremewish:hover #item {
-    height: 256px !important;
-    margin-top: 64px;
-    margin-bottom: 64px;
-    border-width: 16px;
-    border-color: red;
-}
-.extremewish:hover .name {
-    font-size: 64px;
-    color: red;
-}
 #wish:hover .name {
     font-size: 48px;
+}
+.extreme-priority {
+    border: 2px red dotted;
+}
+.extreme-priority:hover {
+    height: 256px;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    border-width: 8px;
 }
 
 .thumbnail {
@@ -59,6 +59,9 @@ a {
     height: 100%;
     float: left;
     margin-right: 16px;
+}
+#settings {
+    height: 100px;
 }
 .name {
     display: block;
@@ -112,4 +115,87 @@ a {
     -webkit-text-stroke: 3px black;
     -webkit-animation: flash 0.5s infinite alternate;
     font-size: 60px;
+}
+
+.vislink {
+    text-decoration: underline;
+    color: blue;
+    cursor: help;
+}
+
+
+
+
+
+label {
+    border-radius: 3px;
+    border: 1px solid #999;
+    padding-right: 16px;
+}
+
+/* hide input */
+input.radio:empty {
+	margin-left: -999px;
+    display: none;
+}
+
+/* style label */
+input.radio:empty ~ label {
+    margin: 8px;
+	position: relative;
+	float: left;
+	line-height: 2.5em;
+	text-indent: 3.25em;
+	margin-top: 2em;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.all {
+    border: 2px solid green !important;
+}
+
+input.radio:empty ~ label:before {
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	content: '';
+	width: 2.5em;
+	background: #AAA;
+	border-radius: 3px 0 0 3px;
+}
+
+/* toggle hover */
+input.radio:hover:not(:checked) ~ label:before {
+	content:'\2714';
+	text-indent: .9em;
+	color: #FFF;
+}
+
+input.radio:hover:not(:checked) ~ label {
+	color: #888;
+}
+
+/* toggle on */
+input.radio:checked ~ label:before {
+	content:'\2714';
+	text-indent: .9em;
+	color: #BF6000;
+	background-color: #FF8000;
+}
+
+input.radio:checked ~ label {
+	color: #FF0000;
+    font-weight: bold;
+    border-color: #FF0000;
+}
+
+.btn {
+    height: 0px;
+    margin: 0px;
 }
